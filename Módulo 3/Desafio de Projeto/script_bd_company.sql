@@ -71,8 +71,8 @@ create table project(
 	Pname varchar(15) not null,
 	Pnumber int not null,
     Plocation varchar(15),
-    Dnum int not null,
-    primary key (Pnumber));
+    Dnum int not null);
+    --primary key (Pnumber)
     --constraint unique_project unique (Pname),
     --constraint fk_project foreign key (Dnum) references departament(Dnumber)
 --);
@@ -81,8 +81,8 @@ create table project(
 create table works_on(
 	Essn char(9) not null,
     Pno int not null,
-    Hours decimal(3,1) not null,
-    primary key (Essn, Pno));
+    Hours decimal(3,1) not null);
+    --primary key (Essn, Pno)
     --constraint fk_employee_works_on foreign key (Essn) references employee(Ssn),
     --constraint fk_project_works_on foreign key (Pno) references project(Pnumber)
 --);
@@ -93,8 +93,8 @@ create table dependent(
     Dependent_name varchar(15) not null,
     Sex char,
     Bdate date,
-    Relationship varchar(8),
-    primary key (Essn, Dependent_name));
+    Relationship varchar(8));
+    --primary key (Essn, Dependent_name)
     --constraint fk_dependent foreign key (Essn) references employee(Ssn)
 --);
 
